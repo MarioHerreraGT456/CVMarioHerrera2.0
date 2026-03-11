@@ -23,7 +23,7 @@ const TechStack = () => {
 
   return (
     // Retorna el JSX que define la estructura visual del componente.
-    <div>
+    <div className="tech">
       {/* Utiliza la llave 'tech.title' definida en tus archivos JSON para el título dinámico. */}
       <h2 className="tech-title">{t("tech.title")}</h2>
 

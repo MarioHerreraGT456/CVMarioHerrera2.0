@@ -313,15 +313,21 @@ main {
     padding: 8px 12px;
     font-size: 0.8em;
   }
+  .tech {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+  }
   .tech-container {
     padding: 15px;
-    width: 90%;
+    width: 80%;
   }
   .tech-stack {
     gap: 10px;
   }
   .tech-icon {
-    width: 40px;
+    width: 35px;
     height: auto;
   }
   .info-column {
