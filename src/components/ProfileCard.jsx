@@ -9,7 +9,7 @@ import Uba from "../assets/UBA.png"; // Importa el logo de la Universidad Bicent
 import Lourtec from "../assets/Lourtec.png"; // Importa el logo del Instituto Lourtec.
 import Platzi from "../assets/Platzi.png"; // Importa el logo de Platzi.
 import Mail from "../assets/mail.png"; // Importa el icono de correo electrónico.
-import Linkedin from "../assets/Linkedin.png"; // Importa el icono de LinkedIn.
+import Linkedin from "../assets/LinkedIn.png"; // Importa el icono de LinkedIn.
 import Instragram from "../assets/Instagram.png"; // Importa el icono de Instagram.
 import Cv from "../assets/cv.png"; // Importa el icono para el currículum.
 
