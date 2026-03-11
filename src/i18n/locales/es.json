@@ -1,0 +1,82 @@
+{
+  "header": {
+    "translate_btn": "English"
+  },
+  "tech": {
+    "title": "Conocimientos"
+  },
+  "profile": {
+    "name": "Mario Herrera",
+    "tabs": {
+      "exp": "Experiencia",
+      "edu": "Educación",
+      "con": "Contacto"
+    }
+  },
+  "experience": {
+    "webmaster": {
+      "title": "Web Master",
+      "description": "Parte del equipo para el desarrollo del sitio web de la empresa, se buscaba actualizar la imagen de la empresa y para requerían un diseño moderno para la web.",
+      "bullets": [
+        "Desarrollo del sitio con Wordpress y Elementor.",
+        "Aplicación SEO.",
+        "Inyección de código HTML, CSS y Javascript para cumplir y diseño y funcionalidades.",
+        "Optimización del rendimiento del sitio.",
+        "Optimización PHP de Wordpress."
+      ]
+    },
+    "fullstack_ccp": {
+      "title": "Desarrollador Full Stack",
+      "description": "Proyecto freelance para el desarrollo de una tienda virtual para el gremio de contadores del estado Miranda, Venezuela.",
+      "bullets": [
+        "Diseño y Desarrollo del e-commerce del Colegio de Contadores.",
+        "Optimización del rendimiento y aplicación de técnicas de SEO.",
+        "Diseño de interfaces responsivas.",
+        "Tecnologías: WordPress, Elementor, WooCommerce, Canva"
+      ]
+    },
+    "webdev": {
+      "title": "Desarrollador Web",
+      "description": "Desarrollo y gestión de páginas web y tiendas virtuales en WordPress con Elementor y WooCommerce.",
+      "bullets": [
+        "Optimización del rendimiento y aplicación de técnicas de SEO.",
+        "Diseño de interfaces responsivas para móviles, tablets y PCs.",
+        "Tecnologías: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva"
+      ]
+    },
+    "fullstack_tnvio": {
+      "title": "Desarrollador Full Stack",
+      "description": "Desarrollo de plataforma web para envío de remesas entre México y Venezuela usando Laravel.",
+      "bullets": [
+        "Implementación de módulos de clientes, verificadores, operadores bancarios y usuario master.",
+        "Gestión de bases de datos en SQL Server e integración de APIs de pasarelas de pago.",
+        "Tecnologías: Laravel, PHP, HTML5, CSS, JavaScript, SQL Server, Tailwind CSS."
+      ]
+    }
+  },
+  "education": {
+    "uba": {
+      "name": "Universidad Bicentenaria de Aragua",
+      "degree": "Ingeniero en Sistemas",
+      "year": "Año: 2022 - cursando.",
+      "description": "Actualmente cursando últimos trimestres de la carrera de ingeniería en sistemas, con enfoque en desarrollo web y bases de datos."
+    },
+    "platzi": {
+      "name": "Platzi",
+      "degree": "Certificaciones",
+      "year": "Año: 2020",
+      "description": "Estrategias para Aprender en Línea Efectivamente, Fundamentos de Javascript, HTML y CSS, Whatsapp Business, Git y Github 2017."
+    },
+    "lourtec": {
+      "name": "Instituto Tecnológico Lourtec",
+      "degree": "Técnico en Tecnología Microsoft",
+      "year": "Año: 2018"
+    }
+  },
+  "contact": {
+    "cv_btn": "Descargar CV (PDF)"
+  },
+  "tech_stack": {
+    "title": "Conocimientos"
+  }
+}

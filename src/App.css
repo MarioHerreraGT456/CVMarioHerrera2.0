@@ -1,0 +1,356 @@
+#root {
+  text-align: center;
+  width: 100%;
+}
+.logo {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+}
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid #646cff;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
+}
+.lan-btn option {
+  color: black;
+  background-color: #363636;
+}
+
+main {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 50px;
+  /* CAMBIO CLAVE: Añadimos espacio arriba para que la card no choque con el header */
+  /* padding-top: 100px;
+  padding-bottom: 50px; */
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-background {
+  position: fixed; /* Mantiene el video estático al hacer scroll */
+
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.main-header {
+  width: 100%;
+  /* position: fixed;
+  top: 0; */
+  z-index: 100;
+
+  /* Opcional: Un fondo semitransparente para que el scroll se vea bien detrás del header */
+  z-index: 100;
+
+  /* Opcional: Un fondo semitransparente para que el scroll se vea bien detrás del header */
+  background: rgba(36, 36, 36, 0.8);
+  backdrop-filter: blur(10px);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.profile-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 50px auto;
+  width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 50px;
+  height: 600px;
+}
+
+.photo-column {
+  flex: 1;
+  position: relative;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Difuminado en la base */
+}
+
+/* Columna de Información y Scroll */
+.info-column {
+  flex: 1.5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.tab-content {
+  display: flex;
+  justify-content: center;
+}
+.tab-menu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.scroll-area {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.tech-container {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de Iconos */
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 10rem;
+  color: white;
+
+  /* overflow-x: auto; */
+}
+.tech-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.tech-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.25s;
+}
+.item img {
+  width: 70%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+.item p {
+  text-align: left;
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  top: 50%;
+}
+.contact-item {
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+.contact-icon {
+  width: 40px;
+  height: 40px;
+}
+.contact-text {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chat-toggle {
+  background: transparent; /* Verde WhatsApp */
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+
+.chat-window {
+  width: 400px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px); /* Manteniendo el estilo de tu portafolio */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chat-header {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.chat-body {
+  padding-right: 10px;
+  padding-left: 10px;
+  flex: 1;
+}
+
+.chat-body textarea {
+  width: 90%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  height: 100px;
+}
+.whatsapp-icon {
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 768px) {
+  /* Header */
+  .header-container {
+    padding: 10px;
+  }
+  .logo {
+    width: 70px;
+  }
+
+  /* Profile Card: Se apilan las columnas */
+  .profile-card {
+    flex-direction: column;
+  }
+  .photo-column {
+    height: 300px;
+    min-height: 300px;
+  }
+  .info-column {
+    padding: 15px;
+  }
+
+  /* Tech Stack: Iconos más pequeños y ajustados */
+  .tech-stack {
+    gap: 15px;
+  }
+  .tech-icon {
+    width: 45px;
+  }
+
+  /* Ventana de Chat: Pantalla completa en móvil */
+  .chat-window {
+    position: fixed;
+    width: 95%;
+    border-radius: 0;
+    bottom: 0;
+    right: 5px;
+  }
+
+  .chat-body textarea {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    margin: 10px;
+    height: auto;
+  }
+  .tab-menu button {
+    padding: 8px 12px;
+    font-size: 0.8em;
+  }
+  .tech-container {
+    padding: 15px;
+    width: 90%;
+  }
+  .tech-stack {
+    gap: 10px;
+  }
+  .tech-icon {
+    width: 40px;
+    height: auto;
+  }
+  .info-column {
+    padding: 0;
+  }
+  .photo-wrapper img {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .photo-overlay {
+    padding: 5px;
+    position: relative;
+  }
+
+  .scroll-area {
+    padding: 0;
+  }
+  .item p {
+    font-size: 14px;
+  }
+  .tab-menu {
+    margin-bottom: 10px;
+  }
+  .tab-content {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-area {
+    padding: 0;
+  }
+}

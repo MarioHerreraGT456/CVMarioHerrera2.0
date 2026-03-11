@@ -1,0 +1,82 @@
+{
+  "header": {
+    "translate_btn": "Español"
+  },
+  "tech": {
+    "title": "Skills"
+  },
+  "profile": {
+    "name": "Mario Herrera",
+    "tabs": {
+      "exp": "Experience",
+      "edu": "Education",
+      "con": "Contact"
+    }
+  },
+  "experience": {
+    "webmaster": {
+      "title": "Web Master",
+      "description": "Part of the team for the company's website development, aiming to update the brand image with a modern web design.",
+      "bullets": [
+        "Website development with WordPress and Elementor.",
+        "SEO implementation.",
+        "HTML, CSS, and Javascript code injection for design and functionality.",
+        "Site performance optimization.",
+        "WordPress PHP optimization."
+      ]
+    },
+    "fullstack_ccp": {
+      "title": "Full Stack Developer",
+      "description": "Freelance project for the development of an online store for the accountants' guild of Miranda state, Venezuela.",
+      "bullets": [
+        "Design and Development of the Accountants College e-commerce.",
+        "Performance optimization and SEO application.",
+        "Responsive interface design.",
+        "Technologies: WordPress, Elementor, WooCommerce, Canva"
+      ]
+    },
+    "webdev": {
+      "title": "Web Developer",
+      "description": "Development and management of web pages and virtual stores in WordPress with Elementor and WooCommerce.",
+      "bullets": [
+        "Performance optimization and SEO application.",
+        "Responsive interface design for mobiles, tablets, and PCs.",
+        "Technologies: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva"
+      ]
+    },
+    "fullstack_tnvio": {
+      "title": "Full Stack Developer",
+      "description": "Development of a web platform for remittances between Mexico and Venezuela using Laravel.",
+      "bullets": [
+        "Implementation of modules for clients, verifiers, bank operators, and master user.",
+        "Database management in SQL Server and payment gateway API integration.",
+        "Technologies: Laravel, PHP, HTML5, CSS, JavaScript, SQL Server, Tailwind CSS."
+      ]
+    }
+  },
+  "education": {
+    "uba": {
+      "name": "Bicentenary University of Aragua",
+      "degree": "Systems Engineer",
+      "year": "Year: 2022 - present.",
+      "description": "Currently in the final trimesters of the systems engineering degree, focusing on web development and databases."
+    },
+    "platzi": {
+      "name": "Platzi",
+      "degree": "Certifications",
+      "year": "Year: 2020",
+      "description": "Effective Online Learning Strategies, Javascript Fundamentals, HTML and CSS, WhatsApp Business, Git and Github 2017."
+    },
+    "lourtec": {
+      "name": "Lourtec Technological Institute",
+      "degree": "Microsoft Technology Technician",
+      "year": "Year: 2018"
+    }
+  },
+  "contact": {
+    "cv_btn": "Download CV (PDF)"
+  },
+  "tech_stack": {
+    "title": "Skills"
+  }
+}
