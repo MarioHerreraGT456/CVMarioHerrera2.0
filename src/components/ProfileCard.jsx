@@ -5,12 +5,12 @@ import Frocori from "../assets/frocori.png"; // Importa la imagen del proyecto F
 import Ccp from "../assets/ccp1.png"; // Importa la imagen del proyecto Colegio de Contadores.
 import Clinmedia from "../assets/clinmedia.png"; // Importa la imagen del proyecto Clinmedia.
 import Tnvio from "../assets/tnvio1.jpeg"; // Importa la imagen del proyecto TNVIO.
-import Uba from "../assets/uba.png"; // Importa el logo de la Universidad Bicentenaria de Aragua.
-import Lourtec from "../assets/lourtec.png"; // Importa el logo del Instituto Lourtec.
-import Platzi from "../assets/platzi.png"; // Importa el logo de Platzi.
+import Uba from "../assets/UBA.png"; // Importa el logo de la Universidad Bicentenaria de Aragua.
+import Lourtec from "../assets/Lourtec.png"; // Importa el logo del Instituto Lourtec.
+import Platzi from "../assets/Platzi.png"; // Importa el logo de Platzi.
 import Mail from "../assets/mail.png"; // Importa el icono de correo electrónico.
-import Linkedin from "../assets/linkedin.png"; // Importa el icono de LinkedIn.
-import Instragram from "../assets/instagram.png"; // Importa el icono de Instagram.
+import Linkedin from "../assets/Linkedin.png"; // Importa el icono de LinkedIn.
+import Instragram from "../assets/Instagram.png"; // Importa el icono de Instagram.
 import Cv from "../assets/cv.png"; // Importa el icono para el currículum.
 
 const ProfileCard = () => {
