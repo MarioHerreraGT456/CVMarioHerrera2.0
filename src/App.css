@@ -174,7 +174,8 @@ main {
   border-radius: 25px;
 }
 
-.item p {
+.item p,
+.item li {
   text-align: left;
 }
 
