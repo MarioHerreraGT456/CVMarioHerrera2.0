@@ -98,6 +98,9 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
+  position: relative;
+  top: 90px;
+  mask-image: linear-gradient(black 75%, transparent);
 }
 
 .photo-overlay {
@@ -350,7 +353,7 @@ main {
   }
   .photo-wrapper img {
     margin: 0 auto;
-    width: 50%;
+    top: 75px;
   }
   .photo-overlay {
     padding: 5px;

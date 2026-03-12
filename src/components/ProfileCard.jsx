@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // Importa React y el hook useState para manejar el estado de las pestañas.
 import { useTranslation } from "react-i18next"; // Importa el hook useTranslation para acceder a las funciones de traducción.
-import fotoPerfil from "../assets/image4.png"; // Importa la imagen de perfil desde la carpeta de assets.
+import fotoPerfil from "../assets/mario2.png"; // Importa la imagen de perfil desde la carpeta de assets.
 import Frocori from "../assets/frocori.png"; // Importa la imagen del proyecto Frocori.
 import Ccp from "../assets/ccp1.png"; // Importa la imagen del proyecto Colegio de Contadores.
 import Clinmedia from "../assets/clinmedia.png"; // Importa la imagen del proyecto Clinmedia.
