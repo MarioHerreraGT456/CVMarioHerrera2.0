@@ -12,6 +12,6 @@ createRoot(document.getElementById("root")).render(
     <BackgroundVideo />
     <Header />
     <App />
-    <ChatWhatsapp />
+    {/* <ChatWhatsapp /> */}
   </StrictMode>,
 );
