@@ -83,17 +83,16 @@ const ProfileCard = () => {
                 <p>
                   {t("experience.webmaster.description")}{" "}
                   {/* Descripción del cargo traducida. */}
-                  <br />
+                </p>
+                <br />
+                <ul>
                   {/* Recorre el array de viñetas en el JSON y las imprime con un guion. */}
                   {t("experience.webmaster.bullets", {
                     returnObjects: true,
                   }).map((bullet, index) => (
-                    <React.Fragment key={index}>
-                      - {bullet}
-                      <br />
-                    </React.Fragment>
+                    <li key={index}>{bullet}</li>
                   ))}
-                </p>
+                </ul>
                 <img src={Frocori} alt="Proyecto" />{" "}
                 {/* Imagen del proyecto realizado. */}
                 <hr /> {/* Línea divisoria entre ítems. */}
@@ -101,54 +100,45 @@ const ProfileCard = () => {
               {/* Item: Full Stack CCP */}
               <div className="item">
                 <h3>{t("experience.fullstack_ccp.title")}</h3>
-                <p>
-                  {t("experience.fullstack_ccp.description")}
-                  <br />
+                <p>{t("experience.fullstack_ccp.description")}</p>
+                <br />
+                <ul>
                   {t("experience.fullstack_ccp.bullets", {
                     returnObjects: true,
                   }).map((bullet, index) => (
-                    <React.Fragment key={index}>
-                      - {bullet}
-                      <br />
-                    </React.Fragment>
+                    <li key={index}>{bullet}</li>
                   ))}
-                </p>
+                </ul>
                 <img src={Ccp} alt="Proyecto" />
                 <hr />
               </div>
               {/* Item: Web Developer Clinmedia */}
               <div className="item">
                 <h3>{t("experience.webdev.title")}</h3>
-                <p>
-                  {t("experience.webdev.description")}
-                  <br />
+                <p>{t("experience.webdev.description")}</p>
+                <br />
+                <ul>
                   {t("experience.webdev.bullets", { returnObjects: true }).map(
                     (bullet, index) => (
-                      <React.Fragment key={index}>
-                        - {bullet}
-                        <br />
-                      </React.Fragment>
+                      <li key={index}>{bullet}</li>
                     ),
                   )}
-                </p>
+                </ul>
                 <img src={Clinmedia} alt="Proyecto" />
                 <hr />
               </div>
               {/* Item: Full Stack TNVIO */}
               <div className="item">
                 <h3>{t("experience.fullstack_tnvio.title")}</h3>
-                <p>
-                  {t("experience.fullstack_tnvio.description")}
-                  <br />
+                <p>{t("experience.fullstack_tnvio.description")}</p>
+                <br />
+                <ul>
                   {t("experience.fullstack_tnvio.bullets", {
                     returnObjects: true,
                   }).map((bullet, index) => (
-                    <React.Fragment key={index}>
-                      - {bullet}
-                      <br />
-                    </React.Fragment>
+                    <li key={index}>{bullet}</li>
                   ))}
-                </p>
+                </ul>
                 <img src={Tnvio} alt="Proyecto" />
                 <hr />
               </div>
