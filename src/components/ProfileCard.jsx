@@ -84,7 +84,6 @@ const ProfileCard = () => {
                   {t("experience.webmaster.description")}{" "}
                   {/* Descripción del cargo traducida. */}
                 </p>
-                <br />
                 <ul>
                   {/* Recorre el array de viñetas en el JSON y las imprime con un guion. */}
                   {t("experience.webmaster.bullets", {
@@ -101,8 +100,8 @@ const ProfileCard = () => {
               <div className="item">
                 <h3>{t("experience.fullstack_ccp.title")}</h3>
                 <p>{t("experience.fullstack_ccp.description")}</p>
-                <br />
-                <ul>
+
+                <ul className="item-ccp">
                   {t("experience.fullstack_ccp.bullets", {
                     returnObjects: true,
                   }).map((bullet, index) => (
@@ -116,7 +115,7 @@ const ProfileCard = () => {
               <div className="item">
                 <h3>{t("experience.webdev.title")}</h3>
                 <p>{t("experience.webdev.description")}</p>
-                <br />
+
                 <ul>
                   {t("experience.webdev.bullets", { returnObjects: true }).map(
                     (bullet, index) => (
@@ -131,7 +130,7 @@ const ProfileCard = () => {
               <div className="item">
                 <h3>{t("experience.fullstack_tnvio.title")}</h3>
                 <p>{t("experience.fullstack_tnvio.description")}</p>
-                <br />
+
                 <ul>
                   {t("experience.fullstack_tnvio.bullets", {
                     returnObjects: true,
@@ -172,6 +171,15 @@ const ProfileCard = () => {
                 <h2>{t("education.lourtec.name")}</h2>
                 <h3>{t("education.lourtec.degree")}</h3>
                 <p>{t("education.lourtec.year")}</p>
+
+                <p>{t("education.lourtec.description")}</p>
+                <ul>
+                  {t("education.lourtec.bullets", { returnObjects: true }).map(
+                    (bullet, index) => (
+                      <li key={index}>{bullet}</li>
+                    ),
+                  )}
+                </ul>
                 <img src={Lourtec} alt="Instituto Tecnológico Lourtec" />
                 <hr />
               </div>

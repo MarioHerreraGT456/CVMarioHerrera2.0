@@ -70,7 +70,9 @@
     "lourtec": {
       "name": "Lourtec Technological Institute",
       "degree": "Microsoft Technology Technician",
-      "year": "Year: 2018"
+      "year": "Year: 2018",
+      "description": "Microsoft technology technician course, focusing on Windows Server system administration.",
+      "bullets": ["Windows Server", "C# Development", "SQL Server"]
     }
   },
   "contact": {

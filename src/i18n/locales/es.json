@@ -70,7 +70,9 @@
     "lourtec": {
       "name": "Instituto Tecnológico Lourtec",
       "degree": "Técnico en Tecnología Microsoft",
-      "year": "Año: 2018"
+      "year": "Año: 2018",
+      "description": "Curso de técnico en tecnología Microsoft, con enfoque en administración de sistemas operativos Windows Server.",
+      "bullets": ["Windows Server", "Desarrollo en C#", "SQL Server"]
     }
   },
   "contact": {
