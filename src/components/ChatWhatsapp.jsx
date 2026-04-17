@@ -29,7 +29,8 @@ const ChatWhatsapp = () => {
 
   const enviarMensaje = async (e) => {
     e.preventDefault(); // Previene recarga de página.
-    const N8N_WEBHOOK_URL = ""; // URL de tu n8n.
+    const N8N_WEBHOOK_URL =
+      "https://aioria2314-chatwhatsapp.hf.space/webhook/0da41d4c-395d-4ee8-8363-d37eb219a125/chat"; // URL de tu n8n.
 
     try {
       const response = await fetch(N8N_WEBHOOK_URL, {

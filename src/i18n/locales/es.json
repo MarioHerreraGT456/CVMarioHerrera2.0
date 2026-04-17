@@ -80,5 +80,11 @@
   },
   "tech_stack": {
     "title": "Conocimientos"
+  },
+  "asesoria": {
+    "unetrans": {
+      "title": "Proyecto de Asesoría Académica - Unetras",
+      "description": "Proyecto para optar para el titulo de TSU en la Unetras (Universidad Nacional Experimental del Transporte), se busco crear un sistema de gestión para el area medica de la universidad, la estudiante en busca de un mejor aprendizaje y una guia para la implementacion del sistema. Busco ayuda en mis conocimientos, se volvio a hacer desde cero usando Laravel porque se necesitaba hacer las implementaciones en poco tiempo. Su debilidad era el backend, asi que la hice trabajar para que hiciera el codigo para que se pareciera al mio y asi entendiera sobre el tema para evitar el famoso codigo espagueti. Luego de un gran esfuerzo de aprendizaje, hicimos la simulacion de la defensa de su proyecto para que estuviera preparada en el escenario real. Le explique sobre como tenia que exponer y la actitud corpotal ademas de tips para hacer fluida la presentacio pero lo mas importante fomente la seguridad y la asertividad en el habla porque los programadores una debilidad que tenemos en la comunicación. Despues de varias semanas de trabajo tuvo una calificaci+on de 18,75 sobre 20."
+    }
   }
 }

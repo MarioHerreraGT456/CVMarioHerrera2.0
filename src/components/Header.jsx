@@ -12,7 +12,15 @@ const Header = () => {
   return (
     <header className="main-header">
       <div className="header-container">
-        <img src={Logo} alt="Logo" className="logo" />
+        <a href="index.html">
+          <img src={Logo} alt="Logo" className="logo" />
+        </a>
+        <div className="nav-container">
+          <a href="asesoria.html" className="nav-link">
+            Asesorias
+          </a>
+        </div>
+
         <button className="lang-btn" onClick={changeLanguage}>
           {t("header.translate_btn")}
         </button>

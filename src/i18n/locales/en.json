@@ -80,5 +80,11 @@
   },
   "tech_stack": {
     "title": "Skills"
+  },
+  "asesoria": {
+    "unetrans": {
+      "title": "Academic Advising Project - Unetras",
+      "description": "This project, submitted to Unetras (National Experimental University of Transportation) for her Associate's Degree, aimed to create a management system for the university's medical department. The student, seeking a better learning experience and guidance for system implementation, sought my expertise. The system was rebuilt from scratch using Laravel because implementation was required quickly. Her weakness was the backend, so I had her write code that resembled mine, helping her understand the subject and avoid the dreaded spaghetti code. After a significant learning effort, we simulated her project defense to prepare her for a real-world scenario. I explained presentation techniques, including body language and tips for a smooth presentation, but most importantly, I emphasized confidence and assertiveness in her speech, recognizing that communication is a common weakness for programmers. After several weeks of work, it received a rating of 18.75 out of 20."
+    }
   }
 }

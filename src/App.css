@@ -74,6 +74,20 @@ main {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container a {
+  text-decoration: none;
+  color: white;
+}
+.nav-container a:hover {
+  transform: scale(1.5);
+  transition: all 0.3s ease-in-out;
+}
 .profile-card {
   display: flex;
   background: rgba(255, 255, 255, 0.1);
@@ -86,6 +100,16 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
   gap: 50px;
   height: 600px;
+}
+.asesoria-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 50px auto;
+  width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .photo-column {
@@ -376,5 +400,166 @@ main {
   }
   .scroll-area {
     padding: 0;
+  }
+}
+
+/* =========================================
+   CARRUSEL INFINITO
+   ========================================= */
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Oculta lo que se sale del contenedor */
+  margin-top: 20px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content; /* Permite que el track sea tan ancho como las imágenes lo requieran */
+  /* Ajusta el tiempo (20s) para hacerlo más rápido o más lento */
+  animation: scrollInfinito 20s linear infinite;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Opcional: Pausar el carrusel cuando el usuario pasa el mouse */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  padding: 0 10px; /* Espaciado entre imágenes */
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 250px; /* Ancho fijo para las tarjetas del carrusel */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* La animación mueve el track exactamente la mitad de su tamaño total */
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   MODAL DE IMÁGENES
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: auto; /* Evita que la imagen se salga de la pantalla verticalmente */
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: -85px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+/* =========================================
+   RESPONSIVO PARA EL CARRUSEL
+   ========================================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .carousel-item img {
+    width: 200px; /* Reducimos el ancho */
+    height: 120px;
+  }
+
+  .carousel-track {
+    animation-duration: 15s; /* Un poco más rápido para compensar el tamaño */
+  }
+
+  .modal-content img {
+    max-width: 95%; /* Más espacio en móviles */
+  }
+  .modal-overlay {
+    height: 100%;
+  }
+}
+
+/* Teléfonos móviles (Pantallas pequeñas) */
+@media (max-width: 480px) {
+  .carousel-container {
+    margin-top: 15px;
+  }
+
+  .carousel-item {
+    padding: 0 5px; /* Menos espacio entre fotos */
+  }
+
+  .carousel-item img {
+    width: 160px; /* Tamaño ideal para que se vean al menos 2 a la vez */
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .carousel-track {
+    animation-duration: 12s; /* Ajuste de velocidad */
+  }
+
+  /* Ajuste del botón de cerrar en el modal para que sea fácil de tocar */
+  .close-btn {
+    top: -95%;
+    right: -15%;
+    font-size: 50px;
+  }
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.95); /* Fondo más sólido en móvil */
+    height: 100vh;
+  }
+  .modal-content {
+    padding-bottom: 80px;
   }
 }
