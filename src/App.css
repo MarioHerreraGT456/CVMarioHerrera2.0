@@ -550,7 +550,7 @@ main {
 
   /* Ajuste del botón de cerrar en el modal para que sea fácil de tocar */
   .close-btn {
-    top: -95%;
+    top: -50%;
     right: -15%;
     font-size: 50px;
   }
@@ -560,6 +560,6 @@ main {
     height: 100vh;
   }
   .modal-content {
-    padding-bottom: 80px;
+    padding-bottom: 50%;
   }
 }
