@@ -17,7 +17,7 @@ const Header = () => {
         </a>
         <div className="nav-container">
           <a href="/asesoria.html" className="nav-link">
-            Asesorias
+            {"Asesorias.title"}
           </a>
         </div>
 
