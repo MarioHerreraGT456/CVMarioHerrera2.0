@@ -237,7 +237,7 @@ const ProfileCard = () => {
                 {/* Bloque para descargar el CV. */}
                 <img src={Cv} alt="CV" className="contact-icon" />
                 <a
-                  href="/CVMarioHerrera.pdf"
+                  href="/DEVMarioHerrera.pdf"
                   download
                   className="download-btn contact-text"
                 >
