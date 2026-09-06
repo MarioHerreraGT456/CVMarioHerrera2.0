@@ -301,6 +301,9 @@ main {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.55));
+  /* Difumina la base de la foto hacia el fondo en vez de cortar de golpe */
+  mask-image: linear-gradient(to bottom, black 62%, transparent 96%);
+  -webkit-mask-image: linear-gradient(to bottom, black 62%, transparent 96%);
 }
 .hero-photo-glow {
   position: absolute;
