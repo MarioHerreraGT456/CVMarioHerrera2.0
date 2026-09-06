@@ -2,14 +2,31 @@
   "header": {
     "translate_btn": "English"
   },
+  "meta": {
+    "title": "Mario Herrera — Full Stack Developer & Digital Marketing",
+    "description": "Mario Herrera's portfolio: Full Stack web development and Meta Ads / Google Ads campaigns focused on measurable results."
+  },
   "Asesorias": {
     "title": "Consulting"
   },
   "tech": {
-    "title": "Skills"
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend & UI",
+      "backend": "Backend & Tools",
+      "marketing": "Digital Marketing"
+    }
   },
   "profile": {
     "name": "Mario Herrera",
+    "role": "Full Stack Developer & Digital Marketing",
+    "pitch": "I design and build fast, scalable web products and connect them with Meta Ads and Google Ads campaigns to turn visits into real results: more leads, more sales, more growth.",
+    "badges": [
+      "Full Stack Development",
+      "Meta Ads & Google Ads",
+      "SEO & Performance",
+      "100% Responsive"
+    ],
     "tabs": {
       "exp": "Experience",
       "edu": "Education",
@@ -19,40 +36,40 @@
   "experience": {
     "webmaster": {
       "title": "Web Master",
-      "description": "Part of the team for the company's website development, aiming to update the brand image with a modern web design.",
+      "description": "Responsible for modernizing the company's digital image with a faster, cleaner site that's easier to find on Google.",
       "bullets": [
-        "Website development with WordPress and Elementor.",
-        "SEO implementation.",
-        "HTML, CSS, and Javascript code injection for design and functionality.",
-        "Site performance optimization.",
-        "WordPress PHP optimization."
+        "Rebuilt the site on WordPress + Elementor, leaving a fully editable base for the marketing team.",
+        "Applied on-page SEO to improve the site's indexing and visibility in search engines.",
+        "Customized HTML, CSS, and JavaScript to achieve the exact design the brand asked for.",
+        "Optimized site performance (images, caching, and PHP) to cut down load times.",
+        "Tuned WordPress' PHP configuration for a more stable, faster site."
       ]
     },
     "fullstack_ccp": {
       "title": "Full Stack Developer",
-      "description": "Freelance project for the development of an online store for the accountants' guild of Miranda state, Venezuela.",
+      "description": "Freelance project: a custom-built e-commerce store for the accountants' guild of Miranda state, Venezuela.",
       "bullets": [
-        "Design and Development of the Accountants College e-commerce.",
-        "Performance optimization and SEO application.",
-        "Responsive interface design.",
-        "Technologies: WordPress, Elementor, WooCommerce, Canva"
+        "Designed and built the Accountants College's online store from scratch, ready to sell online.",
+        "Applied SEO and performance optimization to attract more organic traffic.",
+        "Built fully responsive interfaces so the store worked as well on mobile as on desktop.",
+        "Technologies: WordPress, Elementor, WooCommerce, Canva."
       ]
     },
     "webdev": {
       "title": "Web Developer",
-      "description": "Development and management of web pages and virtual stores in WordPress with Elementor and WooCommerce.",
+      "description": "Development and maintenance of websites and online stores with WordPress, Elementor, and WooCommerce.",
       "bullets": [
-        "Performance optimization and SEO application.",
-        "Responsive interface design for mobiles, tablets, and PCs.",
-        "Technologies: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva"
+        "Improved performance and applied SEO across several projects to boost their rankings.",
+        "Designed responsive interfaces for mobile, tablet, and desktop, extending each client's reach.",
+        "Technologies: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva."
       ]
     },
     "fullstack_tnvio": {
       "title": "Full Stack Developer",
-      "description": "Development of a web platform for remittances between Mexico and Venezuela using Laravel.",
+      "description": "Development of a remittance platform between Mexico and Venezuela, built with Laravel.",
       "bullets": [
-        "Implementation of modules for clients, verifiers, bank operators, and master user.",
-        "Database management in SQL Server and payment gateway API integration.",
+        "Implemented the client, verifier, bank operator, and master user modules, covering the whole business flow.",
+        "Managed SQL Server databases and integrated payment gateway APIs to process real transactions.",
         "Technologies: Laravel, PHP, HTML5, CSS, JavaScript, SQL Server, Tailwind CSS."
       ]
     }
@@ -79,6 +96,7 @@
     }
   },
   "contact": {
+    "heading": "Ready for your next project? Let's talk results.",
     "cv_btn": "Download CV (PDF)"
   },
   "tech_stack": {
@@ -87,6 +105,8 @@
   "asesoria": {
     "unetrans": {
       "title": "Academic Advising Project - Unetras",
+      "result_label": "Final grade",
+      "result_value": "18.75 / 20",
       "description": "This project, submitted to Unetras (National Experimental University of Transportation) for her Associate's Degree, aimed to create a management system for the university's medical department. The student, seeking a better learning experience and guidance for system implementation, sought my expertise. The system was rebuilt from scratch using Laravel because implementation was required quickly. Her weakness was the backend, so I had her write code that resembled mine, helping her understand the subject and avoid the dreaded spaghetti code. After a significant learning effort, we simulated her project defense to prepare her for a real-world scenario. I explained presentation techniques, including body language and tips for a smooth presentation, but most importantly, I emphasized confidence and assertiveness in her speech, recognizing that communication is a common weakness for programmers. After several weeks of work, it received a rating of 18.75 out of 20."
     }
   }

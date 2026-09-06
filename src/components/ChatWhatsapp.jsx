@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"; // Importa hooks necesarios para estado, efectos y referencias.
-import { useTranslation } from "react-i18next"; // Importa hook para traducciones.
 import whatsappIcon from "../assets/WhatsApp.png"; // Icono de WhatsApp.
 
 const ChatWhatsapp = () => {
-  const { t } = useTranslation(); // Inicializa traducción.
   const [isOpen, setIsOpen] = useState(false); // Estado de visibilidad de la ventana.
   const [mensaje, setMensaje] = useState(""); // Estado del texto del mensaje.
   const [enviado, setEnviado] = useState(false); // Estado de confirmación de envío.

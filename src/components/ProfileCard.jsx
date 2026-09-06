@@ -37,6 +37,8 @@ const ProfileCard = () => {
             {/* Capa superior sobre la foto para mostrar el nombre con degradado. */}
             <h2>{t("profile.name")}</h2>{" "}
             {/* Muestra el nombre usando la llave de traducción 'profile.name'. */}
+            <p className="profile-role">{t("profile.role")}</p>{" "}
+            {/* Rol / propuesta de valor, orientado a resultados. */}
           </div>
         </div>
       </div>
@@ -44,6 +46,19 @@ const ProfileCard = () => {
       <div className="info-column">
         {" "}
         {/* Contenedor de la columna derecha (información dinámica). */}
+        <p className="profile-pitch">{t("profile.pitch")}</p>{" "}
+        {/* Frase de impacto: qué resultado obtiene quien lo contrata. */}
+        <ul className="profile-badges">
+          {" "}
+          {/* Chips rápidos de valor: stack + resultados. */}
+          {t("profile.badges", { returnObjects: true }).map(
+            (badge, index) => (
+              <li key={index} className="profile-badge">
+                {badge}
+              </li>
+            ),
+          )}
+        </ul>
         <nav className="tab-menu">
           {" "}
           {/* Barra de navegación para cambiar entre pestañas. */}
@@ -190,6 +205,8 @@ const ProfileCard = () => {
             <div className="contact-area">
               {" "}
               {/* Contenedor con alineación de contacto definida en App.css. */}
+              <h3 className="contact-heading">{t("contact.heading")}</h3>{" "}
+              {/* Llamado a la acción orientado a resultados. */}
               <div className="contact-item">
                 {" "}
                 {/* Bloque para el correo. */}

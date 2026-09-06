@@ -1,38 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
+/* =========================================================
+   DESIGN TOKENS
+   Paleta derivada del logo (fénix naranja/rojo) + fondo oscuro
+   tipo "terminal" para que se sienta 100% de developer.
+   ========================================================= */
 :root {
-  font-family: "Ubuntu", sans-serif;
+  --color-bg: #0b0d10;
+  --color-bg-soft: #12151a;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-strong: rgba(255, 255, 255, 0.08);
+  --color-border: rgba(255, 141, 70, 0.22);
+  --color-border-soft: rgba(255, 255, 255, 0.12);
+
+  --color-text: #f5f1ec;
+  --color-text-muted: #b7b0a8;
+
+  --color-primary: #ff7a29;
+  --color-primary-dark: #c72907;
+  --color-primary-light: #ffb066;
+  --gradient-primary: linear-gradient(135deg, #ffb066 0%, #ff7a29 45%, #c72907 100%);
+
+  --font-sans: "Ubuntu", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: light dark; */
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
 
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-primary-light);
   text-decoration: inherit;
+  transition: color 0.2s ease;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-primary);
 }
 
 body {
   margin: 0;
-
-  min-width: 320px;
+  min-width: 300px;
   min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(255, 122, 41, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 20%, rgba(199, 41, 7, 0.1), transparent 40%),
+    var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.1;
 }
 
@@ -43,17 +87,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: var(--color-text);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 button:hover {
-  border-color: #646cff;
-  transform: scale(1.2);
-  transition:
-    border-color 0.25s,
-    transform 0.25s;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
 }
-button:focus,
 button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #16110c;
+}
+
+/* Scrollbar de las áreas internas (Chrome/Edge/Firefox) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 8px;
 }

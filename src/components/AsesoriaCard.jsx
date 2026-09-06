@@ -31,7 +31,6 @@ const imagenesProyectos = [
 
 const AsesoriaCard = () => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState("exp");
 
   // Estado para manejar la imagen seleccionada en el modal
   const [selectedImage, setSelectedImage] = useState(null);
@@ -53,6 +52,10 @@ const AsesoriaCard = () => {
           <div className="scroll-area">
             <div className="item">
               <h3>{t("asesoria.unetrans.title")}</h3>
+              <span className="result-badge">
+                {t("asesoria.unetrans.result_label")}:{" "}
+                <strong>{t("asesoria.unetrans.result_value")}</strong>
+              </span>
               <p>{t("asesoria.unetrans.description")}</p>
 
               {/* --- INICIO DEL CARRUSEL INFINITO --- */}

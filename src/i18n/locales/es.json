@@ -2,14 +2,31 @@
   "header": {
     "translate_btn": "Español"
   },
+  "meta": {
+    "title": "Mario Herrera — Desarrollador Full Stack & Marketing Digital",
+    "description": "Portafolio de Mario Herrera: desarrollo web Full Stack y campañas de Meta Ads y Google Ads orientadas a resultados medibles."
+  },
   "Asesorias": {
     "title": "Asesorias"
   },
   "tech": {
-    "title": "Conocimientos"
+    "title": "Conocimientos",
+    "categories": {
+      "frontend": "Frontend & UI",
+      "backend": "Backend & Herramientas",
+      "marketing": "Marketing Digital"
+    }
   },
   "profile": {
     "name": "Mario Herrera",
+    "role": "Desarrollador Full Stack & Marketing Digital",
+    "pitch": "Diseño y desarrollo productos web rápidos y escalables, y los conecto con campañas de Meta Ads y Google Ads para convertir visitas en resultados reales: más leads, más ventas, más crecimiento.",
+    "badges": [
+      "Desarrollo Full Stack",
+      "Meta Ads & Google Ads",
+      "SEO & Rendimiento",
+      "100% Responsivo"
+    ],
     "tabs": {
       "exp": "Experiencia",
       "edu": "Educación",
@@ -19,40 +36,40 @@
   "experience": {
     "webmaster": {
       "title": "Web Master",
-      "description": "Parte del equipo para el desarrollo del sitio web de la empresa, se buscaba actualizar la imagen de la empresa y para requerían un diseño moderno para la web.",
+      "description": "Encargado de modernizar la imagen digital de la empresa con un sitio más rápido, ordenado y fácil de encontrar en Google.",
       "bullets": [
-        "Desarrollo del sitio con Wordpress y Elementor.",
-        "Aplicación SEO.",
-        "Inyección de código HTML, CSS y Javascript para cumplir y diseño y funcionalidades.",
-        "Optimización del rendimiento del sitio.",
-        "Optimización PHP de Wordpress."
+        "Reconstruí el sitio en WordPress + Elementor, dejando una base 100% editable para el equipo de marketing.",
+        "Apliqué SEO on-page para mejorar la indexación y la visibilidad del sitio en buscadores.",
+        "Personalicé HTML, CSS y JavaScript para lograr el diseño exacto que pedía la marca.",
+        "Optimicé el rendimiento del sitio (imágenes, caché y PHP) para reducir los tiempos de carga.",
+        "Ajusté la configuración PHP de WordPress para una web más estable y rápida."
       ]
     },
     "fullstack_ccp": {
       "title": "Desarrollador Full Stack",
-      "description": "Proyecto freelance para el desarrollo de una tienda virtual para el gremio de contadores del estado Miranda, Venezuela.",
+      "description": "Proyecto freelance: e-commerce a medida para el gremio de contadores del estado Miranda, Venezuela.",
       "bullets": [
-        "Diseño y Desarrollo del e-commerce del Colegio de Contadores.",
-        "Optimización del rendimiento y aplicación de técnicas de SEO.",
-        "Diseño de interfaces responsivas.",
-        "Tecnologías: WordPress, Elementor, WooCommerce, Canva"
+        "Diseñé y desarrollé desde cero la tienda virtual del Colegio de Contadores, lista para vender en línea.",
+        "Apliqué SEO y optimización de rendimiento para atraer más visitas orgánicas.",
+        "Construí interfaces 100% responsivas para que la tienda funcionara igual de bien en celular que en PC.",
+        "Tecnologías: WordPress, Elementor, WooCommerce, Canva."
       ]
     },
     "webdev": {
       "title": "Desarrollador Web",
-      "description": "Desarrollo y gestión de páginas web y tiendas virtuales en WordPress con Elementor y WooCommerce.",
+      "description": "Desarrollo y mantenimiento de páginas web y tiendas virtuales con WordPress, Elementor y WooCommerce.",
       "bullets": [
-        "Optimización del rendimiento y aplicación de técnicas de SEO.",
-        "Diseño de interfaces responsivas para móviles, tablets y PCs.",
-        "Tecnologías: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva"
+        "Mejoré el rendimiento y apliqué SEO en varios proyectos para mejorar su posicionamiento.",
+        "Diseñé interfaces responsivas para móviles, tablets y PCs, ampliando el alcance de cada cliente.",
+        "Tecnologías: WordPress, Elementor, WooCommerce, JavaScript, Figma, Canva."
       ]
     },
     "fullstack_tnvio": {
       "title": "Desarrollador Full Stack",
-      "description": "Desarrollo de plataforma web para envío de remesas entre México y Venezuela usando Laravel.",
+      "description": "Desarrollo de una plataforma de envío de remesas entre México y Venezuela, construida en Laravel.",
       "bullets": [
-        "Implementación de módulos de clientes, verificadores, operadores bancarios y usuario master.",
-        "Gestión de bases de datos en SQL Server e integración de APIs de pasarelas de pago.",
+        "Implementé los módulos de clientes, verificadores, operadores bancarios y usuario master, cubriendo todo el flujo del negocio.",
+        "Gestioné bases de datos en SQL Server e integré APIs de pasarelas de pago para procesar transacciones reales.",
         "Tecnologías: Laravel, PHP, HTML5, CSS, JavaScript, SQL Server, Tailwind CSS."
       ]
     }
@@ -79,6 +96,7 @@
     }
   },
   "contact": {
+    "heading": "¿Listo para tu próximo proyecto? Hablemos de resultados.",
     "cv_btn": "Descargar CV (PDF)"
   },
   "tech_stack": {
@@ -87,6 +105,8 @@
   "asesoria": {
     "unetrans": {
       "title": "Proyecto de Asesoría Académica - Unetras",
+      "result_label": "Resultado final",
+      "result_value": "18,75 / 20",
       "description": "Proyecto para optar para el titulo de TSU en la Unetras (Universidad Nacional Experimental del Transporte), se busco crear un sistema de gestión para el area medica de la universidad, la estudiante en busca de un mejor aprendizaje y una guia para la implementacion del sistema. Busco ayuda en mis conocimientos, se volvio a hacer desde cero usando Laravel porque se necesitaba hacer las implementaciones en poco tiempo. Su debilidad era el backend, asi que la hice trabajar para que hiciera el codigo para que se pareciera al mio y asi entendiera sobre el tema para evitar el famoso codigo espagueti. Luego de un gran esfuerzo de aprendizaje, hicimos la simulacion de la defensa de su proyecto para que estuviera preparada en el escenario real. Le explique sobre como tenia que exponer y la actitud corpotal ademas de tips para hacer fluida la presentacio pero lo mas importante fomente la seguridad y la asertividad en el habla porque los programadores una debilidad que tenemos en la comunicación. Despues de varias semanas de trabajo tuvo una calificaci+on de 18,75 sobre 20."
     }
   }

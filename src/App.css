@@ -7,20 +7,30 @@
   height: 75px;
   object-fit: cover;
 }
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.brand-link:hover {
+  transform: scale(1.05);
+}
 .lang-btn {
   background-color: transparent;
-  border: 1px solid #646cff;
-  color: white;
+  border: 1px solid var(--color-primary);
+  color: var(--color-text);
   padding: 0.5em 1em;
   border-radius: 8px;
   cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
   transition:
     background-color 0.25s,
     color 0.25s;
 }
-.lan-btn option {
-  color: black;
-  background-color: #363636;
+.lang-btn:hover {
+  background-color: var(--color-primary);
+  color: #16110c;
 }
 
 main {
@@ -33,9 +43,6 @@ main {
   justify-content: center;
   gap: 50px;
   padding-bottom: 50px;
-  /* CAMBIO CLAVE: Añadimos espacio arriba para que la card no choque con el header */
-  /* padding-top: 100px;
-  padding-bottom: 50px; */
 }
 .container {
   width: 100%;
@@ -44,33 +51,34 @@ main {
   align-items: center;
 }
 .video-background {
-  position: fixed; /* Mantiene el video estático al hacer scroll */
-
+  position: fixed; /* Mantiene el fondo estático al hacer scroll */
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
   z-index: -1;
   top: 0;
   left: 0;
+  opacity: 0.5;
+  filter: saturate(0.85) brightness(0.7);
 }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 .main-header {
   width: 100%;
-  /* position: fixed;
-  top: 0; */
   z-index: 100;
-
-  /* Opcional: Un fondo semitransparente para que el scroll se vea bien detrás del header */
-  z-index: 100;
-
-  /* Opcional: Un fondo semitransparente para que el scroll se vea bien detrás del header */
-  background: rgba(36, 36, 36, 0.8);
+  background: rgba(11, 13, 16, 0.75);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 .header-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  gap: 12px;
+  padding: 16px 20px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -82,39 +90,56 @@ main {
 }
 .nav-container a {
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
 }
 .nav-container a:hover {
-  transform: scale(1.5);
-  transition: all 0.3s ease-in-out;
+  color: var(--color-primary-light);
+  border-color: var(--color-border);
+  transition: all 0.2s ease-in-out;
 }
+
+/* =========================================================
+   PROFILE CARD
+   ========================================================= */
 .profile-card {
   display: flex;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--color-surface);
+  backdrop-filter: blur(14px);
   border-radius: 20px;
   overflow: hidden;
   max-width: 1100px;
   margin: 50px auto;
   width: 95%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 60px -30px rgba(199, 41, 7, 0.45);
   gap: 50px;
-  height: 600px;
+  min-height: 600px;
 }
 .asesoria-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: var(--color-surface);
+  backdrop-filter: blur(14px);
   border-radius: 20px;
   overflow: hidden;
   max-width: 1100px;
   margin: 50px auto;
   width: 95%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 60px -30px rgba(199, 41, 7, 0.45);
 }
 
 .photo-column {
   flex: 1;
   position: relative;
+  overflow: hidden;
+}
+
+.photo-wrapper {
+  height: 100%;
 }
 
 .photo-wrapper img {
@@ -123,7 +148,7 @@ main {
   object-fit: cover;
   display: block;
   position: relative;
-  top: 90px;
+  top: clamp(40px, 8vw, 90px);
   mask-image: linear-gradient(black 75%, transparent);
 }
 
@@ -131,11 +156,20 @@ main {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: var(--color-text);
   padding: 20px;
   text-align: center;
   backdrop-filter: blur(5px); /* Difuminado en la base */
+}
+.photo-overlay h2 {
+  margin: 0;
+}
+.profile-role {
+  margin: 6px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-primary-light);
 }
 
 /* Columna de Información y Scroll */
@@ -144,55 +178,150 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
+
+.profile-pitch {
+  text-align: left;
+  color: var(--color-text-muted);
+  font-size: 1.02em;
+  line-height: 1.55;
+  margin: 4px 0 16px;
+}
+
+.profile-badges {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.profile-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: var(--color-primary-light);
+  background: rgba(255, 122, 41, 0.1);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
 .tab-content {
   display: flex;
   justify-content: center;
 }
 .tab-menu {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
+  margin-bottom: 8px;
+}
+.tab-menu button {
+  background: transparent;
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-text-muted);
+}
+.tab-menu button.active {
+  color: var(--color-text);
+  border-color: var(--color-primary);
+  background: rgba(255, 122, 41, 0.12);
+}
+.tab-menu button:hover {
+  transform: none;
+  color: var(--color-text);
 }
 
 .scroll-area {
-  max-height: 500px;
+  max-height: min(500px, 55vh);
   overflow-y: auto;
   padding-right: 10px;
 }
 
+/* =========================================================
+   TECH STACK
+   ========================================================= */
+.tech {
+  width: 95%;
+}
+.tech-title {
+  font-family: var(--font-mono);
+}
 .tech-container {
   max-width: 1150px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  align-items: stretch;
+  gap: 28px;
 
   padding: 30px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border);
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.tech-category-title {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  margin: 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+.tech-category-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
 }
 
 /* Estilo de Iconos */
 .tech-stack {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  font-size: 10rem;
-  color: white;
-
-  /* overflow-x: auto; */
+  gap: 18px;
+  color: var(--color-text);
+}
+.tech-icon-tile {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-strong);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 16px;
+  padding: 12px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+.tech-icon-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border);
 }
 .tech-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
-.tech-icon:hover {
-  transform: scale(1.2);
-  transition: transform 0.25s;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .item ul {
@@ -205,7 +334,7 @@ main {
   padding-inline-start: 20px;
 }
 .item-ccp {
-  padding-right: 95px;
+  padding-right: 0;
 }
 
 .item img {
@@ -213,21 +342,34 @@ main {
   height: auto;
   margin-top: 20px;
   border-radius: 25px;
+  border: 1px solid var(--color-border-soft);
 }
 
 .item p,
 .item li {
   text-align: left;
+  color: var(--color-text-muted);
+}
+.item h3 {
+  color: var(--color-text);
 }
 
+/* =========================================================
+   CONTACTO
+   ========================================================= */
 .contact-area {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   gap: 20px;
-  position: relative;
-  top: 50%;
+  width: 100%;
+}
+.contact-heading {
+  text-align: left;
+  color: var(--color-text);
+  font-size: 1.15em;
+  margin: 0 0 4px;
 }
 .contact-item {
   display: flex;
@@ -241,11 +383,39 @@ main {
 }
 .contact-text {
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
   font-size: 1.2em;
   text-align: left;
+  overflow-wrap: anywhere;
+}
+.contact-text:hover {
+  color: var(--color-primary-light);
+}
+.download-btn {
+  border: 1px solid var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 8px;
 }
 
+/* Resultado destacado (ej. calificación final de una asesoría) */
+.result-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--color-primary-light);
+  background: rgba(255, 122, 41, 0.1);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin: 6px 0 12px;
+}
+.result-badge strong {
+  color: var(--color-text);
+}
+
+/* =========================================================
+   CHAT WHATSAPP
+   ========================================================= */
 .chat-container {
   position: fixed;
   bottom: 20px;
@@ -254,18 +424,18 @@ main {
 }
 
 .chat-toggle {
-  background: transparent; /* Verde WhatsApp */
-  color: white;
+  background: transparent;
+  color: var(--color-text);
   font-size: 20px;
   border: none;
 }
 
 .chat-window {
-  width: 400px;
+  width: min(400px, calc(100vw - 40px));
   height: 280px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px); /* Manteniendo el estilo de tu portafolio */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-surface);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   position: absolute;
   bottom: 20px;
@@ -279,7 +449,7 @@ main {
 .chat-header {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  color: white;
+  color: var(--color-text);
   text-align: center;
   font-weight: bold;
   width: 100%;
@@ -294,8 +464,8 @@ main {
 .chat-body textarea {
   width: 90%;
   background: rgba(0, 0, 0, 0.2);
-  border: 1px solid white;
-  color: white;
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-text);
   border-radius: 5px;
   height: 100px;
 }
@@ -303,18 +473,23 @@ main {
   width: 80px;
   height: 80px;
 }
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
 @media (max-width: 768px) {
-  /* Header */
   .header-container {
     padding: 10px;
   }
   .logo {
     width: 70px;
+    height: auto;
   }
 
-  /* Profile Card: Se apilan las columnas */
+  /* Profile Card: se apilan las columnas */
   .profile-card {
     flex-direction: column;
+    min-height: 0;
   }
   .photo-column {
     height: 300px;
@@ -324,21 +499,19 @@ main {
     padding: 15px;
   }
 
-  /* Tech Stack: Iconos más pequeños y ajustados */
-  .tech-stack {
-    gap: 15px;
-  }
-  .tech-icon {
-    width: 45px;
+  .tech-icon-tile {
+    width: 58px;
+    height: 58px;
+    padding: 10px;
   }
 
-  /* Ventana de Chat: Pantalla completa en móvil */
+  /* Ventana de Chat: casi pantalla completa en móvil */
   .chat-window {
     position: fixed;
-    width: 95%;
-    border-radius: 0;
-    bottom: 0;
-    right: 5px;
+    width: calc(100% - 20px);
+    border-radius: 12px;
+    bottom: 10px;
+    right: 10px;
   }
 
   .chat-body textarea {
@@ -346,10 +519,17 @@ main {
   }
 }
 
+/* =========================================================
+   RESPONSIVE — MÓVIL
+   ========================================================= */
 @media (max-width: 480px) {
   .profile-card {
-    margin: 10px;
+    margin: 10px auto;
     height: auto;
+  }
+  .photo-column {
+    height: 220px;
+    min-height: 220px;
   }
   .tab-menu button {
     padding: 8px 12px;
@@ -363,30 +543,28 @@ main {
   }
   .tech-container {
     padding: 20px;
-    width: 90%;
+    width: 100%;
   }
   .tech-stack {
-    gap: 10px;
+    gap: 12px;
   }
-  .tech-icon {
-    width: 35px;
-    height: auto;
+  .tech-icon-tile {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 12px;
   }
   .info-column {
-    padding: 0;
+    padding: 12px;
   }
   .photo-wrapper img {
     margin: 0 auto;
-    top: 75px;
+    top: 45px;
   }
   .photo-overlay {
-    padding: 5px;
-    position: relative;
+    padding: 10px;
   }
 
-  .scroll-area {
-    padding: 0;
-  }
   .item p {
     font-size: 14px;
   }
@@ -394,12 +572,15 @@ main {
     margin-bottom: 10px;
   }
   .tab-content {
-    padding: 10px;
+    padding: 0;
     position: relative;
     overflow: hidden;
   }
-  .scroll-area {
-    padding: 0;
+  .profile-pitch {
+    font-size: 0.95em;
+  }
+  .contact-text {
+    font-size: 1em;
   }
 }
 
@@ -416,27 +597,27 @@ main {
 .carousel-track {
   display: flex;
   width: max-content; /* Permite que el track sea tan ancho como las imágenes lo requieran */
-  /* Ajusta el tiempo (20s) para hacerlo más rápido o más lento */
   animation: scrollInfinito 20s linear infinite;
   justify-content: center;
   align-items: center;
 }
 
-/* Opcional: Pausar el carrusel cuando el usuario pasa el mouse */
+/* Pausa el carrusel cuando el usuario pasa el mouse */
 .carousel-container:hover .carousel-track {
   animation-play-state: paused;
 }
 
 .carousel-item {
-  padding: 0 10px; /* Espaciado entre imágenes */
+  padding: 0 10px;
   cursor: pointer;
 }
 
 .carousel-item img {
-  width: 250px; /* Ancho fijo para las tarjetas del carrusel */
+  width: 250px;
   height: 150px;
   object-fit: cover;
   border-radius: 15px;
+  border: 1px solid var(--color-border-soft);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -444,7 +625,7 @@ main {
 
 .carousel-item img:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 122, 41, 0.35);
 }
 
 /* La animación mueve el track exactamente la mitad de su tamaño total */
@@ -462,14 +643,13 @@ main {
    ========================================= */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-
-  background: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .modal-content {
@@ -483,18 +663,18 @@ main {
 
 .modal-content img {
   max-width: 100%;
-  max-height: auto; /* Evita que la imagen se salga de la pantalla verticalmente */
+  max-height: 80vh;
   object-fit: contain;
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--color-border);
 }
 
 .close-btn {
   position: absolute;
   top: -30px;
-  right: -85px;
+  right: 0;
   background: transparent;
-  color: white;
+  color: var(--color-text);
   border: none;
   font-size: 40px;
   cursor: pointer;
@@ -503,8 +683,9 @@ main {
 }
 
 .close-btn:hover {
-  color: #ff4d4d;
+  color: var(--color-primary);
 }
+
 /* =========================================
    RESPONSIVO PARA EL CARRUSEL
    ========================================= */
@@ -512,19 +693,16 @@ main {
 /* Tablets y pantallas medianas */
 @media (max-width: 900px) {
   .carousel-item img {
-    width: 200px; /* Reducimos el ancho */
+    width: 200px;
     height: 120px;
   }
 
   .carousel-track {
-    animation-duration: 15s; /* Un poco más rápido para compensar el tamaño */
+    animation-duration: 15s;
   }
 
   .modal-content img {
-    max-width: 95%; /* Más espacio en móviles */
-  }
-  .modal-overlay {
-    height: 100%;
+    max-width: 95%;
   }
 }
 
@@ -535,31 +713,27 @@ main {
   }
 
   .carousel-item {
-    padding: 0 5px; /* Menos espacio entre fotos */
+    padding: 0 5px;
   }
 
   .carousel-item img {
-    width: 160px; /* Tamaño ideal para que se vean al menos 2 a la vez */
-    height: 100px;
+    width: 150px;
+    height: 95px;
     border-radius: 10px;
   }
 
   .carousel-track {
-    animation-duration: 12s; /* Ajuste de velocidad */
+    animation-duration: 12s;
   }
 
-  /* Ajuste del botón de cerrar en el modal para que sea fácil de tocar */
+  /* Botón de cerrar dentro de la pantalla en móvil */
   .close-btn {
-    top: -50%;
-    right: -15%;
-    font-size: 50px;
+    top: -46px;
+    right: 0;
+    font-size: 36px;
   }
 
   .modal-overlay {
-    background: rgba(0, 0, 0, 0.95); /* Fondo más sólido en móvil */
-    height: 100vh;
-  }
-  .modal-content {
-    padding-bottom: 50%;
+    background: rgba(0, 0, 0, 0.95);
   }
 }
