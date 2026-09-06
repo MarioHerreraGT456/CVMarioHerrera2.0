@@ -6,9 +6,7 @@ import AsesoriaCard from "./components/AsesoriaCard";
 function AppAsesoria() {
   return (
     <main>
-      <div className="container">
-        <AsesoriaCard />
-      </div>
+      <AsesoriaCard />
     </main>
   );
 }

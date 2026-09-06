@@ -9,6 +9,35 @@
   "Asesorias": {
     "title": "Consulting"
   },
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Portfolio",
+    "greeting": "Hi, I'm",
+    "cta_contact": "Let's talk about your project",
+    "cta_cv": "Download CV"
+  },
+  "sections": {
+    "experience": {
+      "eyebrow": "Track record",
+      "title": "Experience that delivers results"
+    },
+    "education": {
+      "eyebrow": "Background",
+      "title": "Education & certifications"
+    },
+    "skills": {
+      "eyebrow": "Stack"
+    },
+    "contact": {
+      "eyebrow": "Get in touch"
+    }
+  },
   "tech": {
     "title": "Skills",
     "categories": {
@@ -26,12 +55,7 @@
       "Meta Ads & Google Ads",
       "SEO & Performance",
       "100% Responsive"
-    ],
-    "tabs": {
-      "exp": "Experience",
-      "edu": "Education",
-      "con": "Contact"
-    }
+    ]
   },
   "experience": {
     "webmaster": {
@@ -78,31 +102,34 @@
     "uba": {
       "name": "Bicentenary University of Aragua",
       "degree": "Systems Engineer",
-      "year": "Year: 2022 - present.",
+      "year": "2022 — present",
       "description": "Currently in the final trimesters of the systems engineering degree, focusing on web development and databases."
     },
     "platzi": {
       "name": "Platzi",
       "degree": "Certifications",
-      "year": "Year: 2020",
+      "year": "2020",
       "description": "Effective Online Learning Strategies, Javascript Fundamentals, HTML and CSS, WhatsApp Business, Git and Github 2017."
     },
     "lourtec": {
       "name": "Lourtec Technological Institute",
       "degree": "Microsoft Technology Technician",
-      "year": "Year: 2018",
+      "year": "2018",
       "description": "Microsoft technology technician course, focusing on Windows Server system administration.",
       "bullets": ["Windows Server", "C# Development", "SQL Server"]
     }
   },
   "contact": {
-    "heading": "Ready for your next project? Let's talk results.",
+    "eyebrow": "Let's work together",
+    "heading": "Let's talk results",
+    "subheading": "Ready for your next project? Reach out through whichever channel works best for you.",
     "cv_btn": "Download CV (PDF)"
   },
   "tech_stack": {
     "title": "Skills"
   },
   "asesoria": {
+    "eyebrow": "Consulting case study",
     "unetrans": {
       "title": "Academic Advising Project - Unetras",
       "result_label": "Final grade",

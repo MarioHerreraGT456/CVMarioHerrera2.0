@@ -60,32 +60,44 @@ const TechStack = () => {
   const { t } = useTranslation(); // Inicializa la función de traducción 't'.
 
   return (
-    // Retorna el JSX que define la estructura visual del componente.
-    <div className="tech">
-      {/* Utiliza la llave 'tech.title' definida en tus archivos JSON para el título dinámico. */}
-      <h2 className="tech-title">{t("tech.title")}</h2>
+    // Sección de página completa (antes era una card aislada en medio de la
+    // pantalla); ahora ocupa todo el ancho igual que el resto de secciones.
+    <section className="section section--alt" id="skills">
+      <div className="section-inner">
+        <header className="section-header">
+          <span className="eyebrow">{t("sections.skills.eyebrow")}</span>
+          <h2>{t("tech.title")}</h2>
+        </header>
 
-      {/* Contenedor principal con estilos de desenfoque y borde definidos en App.css. */}
-      <div className="tech-container">
-        {CATEGORIES.map((category) => (
-          <section className="tech-category" key={category.key}>
-            {/* Título de la categoría, traducido vía tech.categories.<key> */}
-            <h3 className="tech-category-title">
-              {t(`tech.categories.${category.key}`)}
-            </h3>
-            <div className="tech-stack">
-              {category.icons.map((icon) => (
-                // Tile de fondo uniforme: evita que logos oscuros (MySQL,
-                // GitHub) se pierdan contra el fondo oscuro del sitio.
-                <div className="tech-icon-tile" key={icon.alt} title={icon.alt}>
-                  <img src={icon.src} alt={icon.alt} className="tech-icon" />
-                </div>
-              ))}
+        <div className="tech-categories">
+          {CATEGORIES.map((category) => (
+            <div className="tech-category" key={category.key}>
+              {/* Título de la categoría, traducido vía tech.categories.<key> */}
+              <h3 className="tech-category-title">
+                {t(`tech.categories.${category.key}`)}
+              </h3>
+              <div className="tech-stack">
+                {category.icons.map((icon) => (
+                  // Tile de fondo uniforme: evita que logos oscuros (MySQL,
+                  // GitHub) se pierdan contra el fondo oscuro del sitio.
+                  <div
+                    className="tech-icon-tile"
+                    key={icon.alt}
+                    title={icon.alt}
+                  >
+                    <img
+                      src={icon.src}
+                      alt={icon.alt}
+                      className="tech-icon"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </section>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

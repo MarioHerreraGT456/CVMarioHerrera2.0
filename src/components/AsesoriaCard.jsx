@@ -46,42 +46,45 @@ const AsesoriaCard = () => {
   };
 
   return (
-    <div className="asesoria-card">
-      <div className="info-column">
-        <div className="tab-content">
-          <div className="scroll-area">
-            <div className="item">
-              <h3>{t("asesoria.unetrans.title")}</h3>
-              <span className="result-badge">
-                {t("asesoria.unetrans.result_label")}:{" "}
-                <strong>{t("asesoria.unetrans.result_value")}</strong>
-              </span>
-              <p>{t("asesoria.unetrans.description")}</p>
+    // Página completa por secciones, igual que el resto del sitio
+    // (antes era un único "card" flotante).
+    <>
+      <section className="section asesoria-hero">
+        <div className="section-inner">
+          <span className="eyebrow">{t("asesoria.eyebrow")}</span>
+          <h1>{t("asesoria.unetrans.title")}</h1>
+          <span className="result-badge">
+            {t("asesoria.unetrans.result_label")}:{" "}
+            <strong>{t("asesoria.unetrans.result_value")}</strong>
+          </span>
+          <p className="asesoria-description">
+            {t("asesoria.unetrans.description")}
+          </p>
+        </div>
+      </section>
 
-              {/* --- INICIO DEL CARRUSEL INFINITO --- */}
-              <div className="carousel-container">
-                <div className="carousel-track">
-                  {/* Duplicamos el arreglo para crear la ilusión de ciclo infinito */}
-                  {[...imagenesProyectos, ...imagenesProyectos].map(
-                    (img, index) => (
-                      <div
-                        className="carousel-item"
-                        key={index}
-                        onClick={() => handleImageClick(img)}
-                      >
-                        <img src={img.src} alt={img.alt} />
-                      </div>
-                    ),
-                  )}
-                </div>
-              </div>
-              {/* --- FIN DEL CARRUSEL --- */}
-
-              <hr />
+      <section className="section section--alt">
+        <div className="section-inner">
+          {/* --- INICIO DEL CARRUSEL INFINITO --- */}
+          <div className="carousel-container">
+            <div className="carousel-track">
+              {/* Duplicamos el arreglo para crear la ilusión de ciclo infinito */}
+              {[...imagenesProyectos, ...imagenesProyectos].map(
+                (img, index) => (
+                  <div
+                    className="carousel-item"
+                    key={index}
+                    onClick={() => handleImageClick(img)}
+                  >
+                    <img src={img.src} alt={img.alt} />
+                  </div>
+                ),
+              )}
             </div>
           </div>
+          {/* --- FIN DEL CARRUSEL --- */}
         </div>
-      </div>
+      </section>
 
       {/* --- MODAL PARA LA IMAGEN --- */}
       {selectedImage && (
@@ -94,7 +97,7 @@ const AsesoriaCard = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

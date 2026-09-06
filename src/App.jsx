@@ -1,15 +1,22 @@
 import React from "react";
-import ProfileCard from "./components/ProfileCard";
+import Hero from "./components/Hero";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 import TechStack from "./components/TechStack";
+import Contact from "./components/Contact";
 import "./App.css";
 
+// Página completa por secciones (hero, experiencia, educación, skills,
+// contacto) en vez de un único "card" flotante: navegación real por anclas,
+// cada bloque a todo el ancho como una página profesional.
 function App() {
   return (
     <main>
-      <div className="container">
-        <ProfileCard />
-        <TechStack />
-      </div>
+      <Hero />
+      <Experience />
+      <Education />
+      <TechStack />
+      <Contact />
     </main>
   );
 }

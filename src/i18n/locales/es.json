@@ -7,7 +7,36 @@
     "description": "Portafolio de Mario Herrera: desarrollo web Full Stack y campañas de Meta Ads y Google Ads orientadas a resultados medibles."
   },
   "Asesorias": {
-    "title": "Asesorias"
+    "title": "Asesorías"
+  },
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "skills": "Skills",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Portafolio",
+    "greeting": "Hola, soy",
+    "cta_contact": "Hablemos de tu proyecto",
+    "cta_cv": "Descargar CV"
+  },
+  "sections": {
+    "experience": {
+      "eyebrow": "Trayectoria",
+      "title": "Experiencia con resultados"
+    },
+    "education": {
+      "eyebrow": "Formación",
+      "title": "Educación y certificaciones"
+    },
+    "skills": {
+      "eyebrow": "Stack"
+    },
+    "contact": {
+      "eyebrow": "Contacto"
+    }
   },
   "tech": {
     "title": "Conocimientos",
@@ -26,12 +55,7 @@
       "Meta Ads & Google Ads",
       "SEO & Rendimiento",
       "100% Responsivo"
-    ],
-    "tabs": {
-      "exp": "Experiencia",
-      "edu": "Educación",
-      "con": "Contacto"
-    }
+    ]
   },
   "experience": {
     "webmaster": {
@@ -78,31 +102,34 @@
     "uba": {
       "name": "Universidad Bicentenaria de Aragua",
       "degree": "Ingeniero en Sistemas",
-      "year": "Año: 2022 - cursando.",
+      "year": "2022 — cursando",
       "description": "Actualmente cursando últimos trimestres de la carrera de ingeniería en sistemas, con enfoque en desarrollo web y bases de datos."
     },
     "platzi": {
       "name": "Platzi",
       "degree": "Certificaciones",
-      "year": "Año: 2020",
+      "year": "2020",
       "description": "Estrategias para Aprender en Línea Efectivamente, Fundamentos de Javascript, HTML y CSS, Whatsapp Business, Git y Github 2017."
     },
     "lourtec": {
       "name": "Instituto Tecnológico Lourtec",
       "degree": "Técnico en Tecnología Microsoft",
-      "year": "Año: 2018",
+      "year": "2018",
       "description": "Curso de técnico en tecnología Microsoft, con enfoque en administración de sistemas operativos Windows Server.",
       "bullets": ["Windows Server", "Desarrollo en C#", "SQL Server"]
     }
   },
   "contact": {
-    "heading": "¿Listo para tu próximo proyecto? Hablemos de resultados.",
+    "eyebrow": "¿Trabajamos juntos?",
+    "heading": "Hablemos de resultados",
+    "subheading": "¿Listo para tu próximo proyecto? Escríbeme por el canal que prefieras.",
     "cv_btn": "Descargar CV (PDF)"
   },
   "tech_stack": {
     "title": "Conocimientos"
   },
   "asesoria": {
+    "eyebrow": "Caso de asesoría",
     "unetrans": {
       "title": "Proyecto de Asesoría Académica - Unetras",
       "result_label": "Resultado final",
